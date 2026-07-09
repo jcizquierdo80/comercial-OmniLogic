@@ -38,8 +38,6 @@
         @keyframes scan-line { 0% { top: -2px; } 100% { top: 100%; } }
         @keyframes orbit { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         @keyframes glow-pulse { 0%, 100% { text-shadow: 0 0 10px rgba(0,123,255,0.5); } 50% { text-shadow: 0 0 30px rgba(0,123,255,0.8), 0 0 60px rgba(0,123,255,0.3); } }
-        @keyframes typewriter { from { width: 0; } to { width: 100%; } }
-        @keyframes blink { 0%, 100% { border-color: #007BFF; } 50% { border-color: transparent; } }
 
         .anim-fade-up { animation: fadeUp 0.8s ease-out forwards; }
         .anim-fade-in { animation: fadeIn 1s ease-out forwards; }
@@ -101,11 +99,8 @@
         .neuro-highlight { position: relative; display: inline; }
         .neuro-highlight::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background: #007BFF; opacity: 0.4; }
 
-        .zeigarnik-num { color: #007BFF; font-weight: 900; font-size: 1.1em; }
-
         .logo-img { max-height: 48px; width: auto; object-fit: contain; }
         .logo-img-lg { max-height: 80px; width: auto; object-fit: contain; }
-        .logo-img-hero { max-height: 56px; width: auto; object-fit: contain; filter: brightness(1.1); }
     </style>
 </head>
 <body class="font-inter antialiased">
@@ -114,7 +109,7 @@
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <img src="https://z-cdn-media.chatglm.cn/files/506221ec-495f-4cd2-9384-9daf465bd274.jpeg?auth_key=1883623715-cf1074132f054dbe86041d659c707aa0-0-d90ce6e482c0636d87f7c8cc587f6065" alt="Omni Logic" class="logo-img" />
+                <img src="./assets/logos/omnilogic-dark.jpeg" alt="Omni Logic" class="logo-img" />
             </div>
             <div class="hidden lg:flex items-center gap-7">
                 <a href="#problema" class="nav-link text-silver-400 hover:text-white text-[11px] font-medium tracking-wider uppercase transition-colors">Riesgo</a>
@@ -142,11 +137,7 @@
         </div>
     </nav>
 
-    <!-- ============================== -->
-    <!-- HERO — Neuro: Aversión a la pérdida → Inversión a ganancia -->
-    <!-- Principio: El cerebro procesa 2x más fuerte la amenaza que la promesa. -->
-    <!-- Secuencia: Amígdala (amenaza) → Corteza prefrontal (solución) en <2s -->
-    <!-- ============================== -->
+    <!-- HERO -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0">
             <img src="https://picsum.photos/seed/omnilogic-enterprise-command/1920/1080.jpg" alt="" class="w-full h-full object-cover opacity-25" />
@@ -160,20 +151,17 @@
         <div class="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 w-full">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <!-- Zeigarnik: Número abierto que el cerebro necesita cerrar -->
                     <div class="anim-fade-up opacity-0 inline-flex items-center gap-2 glass-nexus rounded-full px-4 py-2 mb-8">
                         <span class="w-2 h-2 rounded-full bg-nexus-500 animate-pulse"></span>
                         <span class="text-nexus-400 text-xs font-semibold tracking-wider uppercase">El 73% de los proyectos digitales fracasan. Los tuyos no tienen que.</span>
                     </div>
 
-                    <!-- Aversión a pérdida: "Lo que pierdes" antes de "Lo que ganas" -->
                     <h1 class="anim-fade-up opacity-0 delay-100 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-6">
                         Mientras tú<br/>operas a mano,<br/>
                         <span class="text-gradient-nexus">tu competencia</span><br/>
                         ya automatizó.
                     </h1>
 
-                    <!-- Corto = Fluencia cognitiva (Reber & Schwarz) -->
                     <p class="anim-fade-up opacity-0 delay-200 text-silver-300 text-base lg:text-lg font-medium leading-relaxed max-w-lg mb-3">
                         Omnilogic no te vende desarrollo. Te entrega un <span class="neuro-highlight text-white">sistema de producción</span> que hace en días lo que tu equipo hace en semanas.
                     </p>
@@ -181,7 +169,6 @@
                         Ingeniería de primer nivel. Acelerada por IA. Con activos de conocimiento que son <span class="text-nexus-400 font-medium">100% tuyos</span>.
                     </p>
 
-                    <!-- Dopamina: CTA como promesa de recompensa inmediata -->
                     <div class="anim-fade-up opacity-0 delay-400 flex flex-wrap gap-4">
                         <a href="#contacto" class="cta-btn bg-nexus-500 hover:bg-nexus-600 text-white font-bold text-sm tracking-wider uppercase px-8 py-4 rounded transition-all duration-300 flex items-center gap-2" style="animation: pulse-glow 3s ease-in-out infinite;">
                             Quiero Mi Piloto Sin Riesgo
@@ -193,7 +180,6 @@
                         </a>
                     </div>
 
-                    <!-- Anclaje (Tversky): El primer número se convierte en referencia -->
                     <div class="anim-fade-up opacity-0 delay-500 grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/5">
                         <div>
                             <div class="text-2xl lg:text-3xl font-black text-white counter" data-target="25">0</div>
@@ -210,13 +196,11 @@
                     </div>
                 </div>
 
-                <!-- Right Visual -->
                 <div class="anim-slide-left opacity-0 delay-300 relative hidden lg:block">
                     <div class="relative">
                         <div class="img-overlay rounded-2xl overflow-hidden">
                             <img src="https://picsum.photos/seed/enterprise-command-center-dark/700/900.jpg" alt="Centro de Comando Enterprise" class="w-full h-[560px] object-cover" />
                         </div>
-                        <!-- Floating Card: Efecto Dotación -->
                         <div class="absolute -left-16 top-1/4 glass-strong rounded-xl p-4 w-56" style="animation: float 4s ease-in-out infinite;">
                             <div class="flex items-center gap-3 mb-2">
                                 <div class="w-8 h-8 rounded-lg bg-nexus-500/20 flex items-center justify-center">
@@ -226,7 +210,6 @@
                             </div>
                             <div class="text-silver-400 text-[11px] leading-relaxed">Un activo de IA entrenado con <span class="text-white">tus datos</span>, que <span class="text-white">te pertenece</span>. Nadie más lo tiene.</div>
                         </div>
-                        <!-- Floating Card: Velocidad concreta -->
                         <div class="absolute -right-12 bottom-1/3 glass-strong rounded-xl p-4 w-52" style="animation: float 5s ease-in-out infinite 1s;">
                             <div class="flex items-center gap-3 mb-2">
                                 <div class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center">
@@ -248,11 +231,7 @@
         </div>
     </section>
 
-    <!-- ============================== -->
-    <!-- PROBLEMA — Neuro: Anclaje somático + Efecto Zeigarnik -->
-    <!-- Principio: "Sentir" el dolor (somático) > "Describir" el dolor (abstracto) -->
-    <!-- Cada punto usa un número concreto (anclaje) + consecuencia emocional -->
-    <!-- ============================== -->
+    <!-- PROBLEMA -->
     <section id="problema" class="relative py-24 lg:py-32 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-black via-dark-400 to-black"></div>
         <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-nexus-500/20 to-transparent"></div>
@@ -265,7 +244,6 @@
                         <span class="text-red-400 text-xs font-bold tracking-[0.2em] uppercase">Lo que estás perdiendo ahora mismo</span>
                     </div>
 
-                    <!-- Principio de Pérdida: "Cuánto" > "Qué" -->
                     <h2 class="text-3xl lg:text-5xl font-black text-white leading-[0.95] tracking-tighter uppercase mb-4">
                         Sientes que tu<br/>equipo <span class="text-red-400">podría más</span>.<br/>Tienes razón.
                     </h2>
@@ -274,7 +252,6 @@
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <!-- Cada dolor: Número concreto (anclaje) + Consecuencia (aversión) -->
                         <div class="glass rounded-lg p-4 border-l-2 border-red-500/50 card-hover">
                             <div class="flex items-start gap-3">
                                 <div class="text-red-400 text-xl font-black leading-none mt-0.5">23%</div>
@@ -298,7 +275,7 @@
                                 <div class="text-red-400 text-xl font-black leading-none mt-0.5">0%</div>
                                 <div>
                                     <div class="text-white text-sm font-semibold mb-1">De visibilidad sobre lo que realmente pasa</div>
-                                    <div class="text-silver-500 text-xs leading-relaxed">Decisions sin datos = decisiones con riesgo ciego</div>
+                                    <div class="text-silver-500 text-xs leading-relaxed">Decisiones sin datos = decisiones con riesgo ciego</div>
                                 </div>
                             </div>
                         </div>
@@ -330,11 +307,7 @@
         </div>
     </section>
 
-    <!-- ============================== -->
-    <!-- SOLUCIÓN — Neuro: Estructura Problema→Mecanismo→Resultado -->
-    <!-- Principio: Fluencia cognitiva (Reber) = oraciones cortas, metáforas familiares -->
-    <!-- Simplexity: "Piénsalo como..." activa circuito de comprensión inmediata -->
-    <!-- ============================== -->
+    <!-- SOLUCIÓN -->
     <section id="solucion" class="relative py-24 lg:py-32 overflow-hidden">
         <div class="absolute inset-0 bg-black"></div>
         <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-nexus-500/30 to-transparent"></div>
@@ -343,9 +316,8 @@
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-6">
-            <!-- Logo integrado con contexto -->
             <div class="section-hidden text-center mb-6">
-                <img src="https://z-cdn-media.chatglm.cn/files/506221ec-495f-4cd2-9384-9daf465bd274.jpeg?auth_key=1883623715-cf1074132f054dbe86041d659c707aa0-0-d90ce6e482c0636d87f7c8cc587f6065" alt="Omni Logic" class="logo-img-lg mx-auto mb-8 opacity-90" />
+                <img src="./assets/logos/omnilogic-dark.jpeg" alt="Omni Logic" class="logo-img-lg mx-auto mb-8 opacity-90" />
             </div>
 
             <div class="section-hidden text-center mb-20">
@@ -357,13 +329,11 @@
                 <h2 class="text-3xl lg:text-5xl xl:text-6xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-6">
                     No es un servicio.<br/>Es tu <span class="text-gradient-nexus">fábrica</span><br/>de eficiencia.
                 </h2>
-                <!-- Simplexity: Analogía inmediata -->
                 <p class="text-silver-400 text-base lg:text-lg font-light max-w-2xl mx-auto leading-relaxed">
-                    Piénsalo como una línea de producción: <span class="text-white font-medium">tu procesos entran por un lado</span>, y del otro salen automatizados, más rápidos y más baratos. La diferencia es que esta fábrica combina <span class="text-nexus-400 font-medium">tu talento</span> con <span class="text-nexus-400 font-medium">inteligencia artificial</span>.
+                    Piénsalo como una línea de producción: <span class="text-white font-medium">tus procesos entran por un lado</span>, y del otro salen automatizados, más rápidos y más baratos. La diferencia es que esta fábrica combina <span class="text-nexus-400 font-medium">tu talento</span> con <span class="text-nexus-400 font-medium">inteligencia artificial</span>.
                 </p>
             </div>
 
-            <!-- UVP: Estructura Mecanismo → Resultado → Evidencia -->
             <div class="section-hidden max-w-4xl mx-auto mb-20">
                 <div class="border-glow rounded-2xl overflow-hidden">
                     <div class="glass-nexus rounded-2xl p-8 lg:p-12">
@@ -378,7 +348,6 @@
                                 </h3>
                             </div>
                         </div>
-                        <!-- Tres resultados concretos — Dopamina anticipatoria -->
                         <div class="grid sm:grid-cols-3 gap-4 pt-6 border-t border-white/5">
                             <div class="flex items-center gap-3">
                                 <i data-lucide="gauge" class="w-5 h-5 text-nexus-400 flex-shrink-0"></i>
@@ -397,7 +366,6 @@
                 </div>
             </div>
 
-            <!-- 5 Conceptos: Autonomía (Self-Determination Theory) -->
             <div class="section-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                 <div class="glass rounded-xl p-5 card-hover group">
                     <div class="w-10 h-10 rounded-lg bg-nexus-500/10 group-hover:bg-nexus-500/20 flex items-center justify-center mb-4 transition-colors">
@@ -438,11 +406,7 @@
         </div>
     </section>
 
-    <!-- ============================== -->
-    <!-- VENTAJA — Neuro: Principio de Contraste (Cialdini) -->
-    <!-- Los headers de la tabla no son neutrales: cargan emocionalmente -->
-    <!-- "Lo que ya conoces" = status quo → "Lo que necesitas" = solución -->
-    <!-- ============================== -->
+    <!-- VENTAJA -->
     <section id="ventaja" class="relative py-24 lg:py-32 overflow-hidden">
         <div class="absolute inset-0 bg-dark-400"></div>
         <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
@@ -453,7 +417,6 @@
                     <div class="w-8 h-px bg-nexus-500"></div>
                     <span class="text-nexus-400 text-xs font-bold tracking-[0.2em] uppercase">Pilar 01 — Por qué cambia todo</span>
                 </div>
-                <!-- Compromiso y consistencia (Cialdini): Si estás leyendo esto, ya sabes que algo necesita cambiar -->
                 <h2 class="text-3xl lg:text-5xl font-black text-white leading-[0.95] tracking-tighter uppercase mb-4">
                     Si estás leyendo esto,<br/><span class="text-gradient-nexus">ya sabes</span> que<br/>algo tiene que cambiar.
                 </h2>
@@ -462,18 +425,15 @@
                 </p>
             </div>
 
-            <!-- Tabla con contraste emocional en headers -->
             <div class="section-hidden glass rounded-2xl overflow-hidden">
                 <div class="grid grid-cols-3 bg-white/[0.02] border-b border-white/5">
                     <div class="p-5 lg:p-6">
                         <span class="text-silver-500 text-xs font-bold tracking-[0.15em] uppercase">Dimensión</span>
                     </div>
-                    <!-- Status quo bias: "Lo que ya tienes" activa el sesgo de inercia -->
                     <div class="p-5 lg:p-6 border-l border-white/5">
                         <span class="text-silver-500 text-xs font-bold tracking-[0.15em] uppercase">Lo que ya conoces</span>
                         <div class="text-silver-600 text-[10px] mt-0.5">Y por qué ya no es suficiente</div>
                     </div>
-                    <!-- Novedad con seguridad: "Lo que necesitas" = promesa sin amenaza -->
                     <div class="p-5 lg:p-6 border-l border-nexus-500/30 bg-nexus-500/5">
                         <span class="text-nexus-400 text-xs font-bold tracking-[0.15em] uppercase flex items-center gap-2">
                             <i data-lucide="zap" class="w-3.5 h-3.5"></i> Lo que necesitas
@@ -513,7 +473,6 @@
                 </div>
             </div>
 
-            <!-- 4 Diferenciadores: Efecto de recencia (lo último visto = lo más recordado) -->
             <div class="section-hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
                 <div class="glass rounded-xl p-5 border-glow card-hover">
                     <div class="text-nexus-400 text-2xl font-black mb-2">01</div>
@@ -528,7 +487,7 @@
                 <div class="glass rounded-xl p-5 border-glow card-hover">
                     <div class="text-nexus-400 text-2xl font-black mb-2">03</div>
                     <h4 class="text-white text-sm font-bold mb-2">Propiedad > Licencia</h4>
-                    <p class="text-silver-500 text-xs leading-relaxed">El Efecto Dotación es real: valoras más lo que es tuyo. Por eso te damos todo.</p>
+                    <p class="text-silver-500 text-xs leading-relaxed">El Efecto de Dotación es real: valoras más lo que es tuyo. Por eso te damos todo.</p>
                 </div>
                 <div class="glass rounded-xl p-5 border-glow card-hover">
                     <div class="text-nexus-400 text-2xl font-black mb-2">04</div>
@@ -539,11 +498,7 @@
         </div>
     </section>
 
-    <!-- ============================== -->
-    <!-- MODELO HÍBRIDO — Neuro: Self-Determination (Autonomía) -->
-    <!-- Cada capa responde: "¿Qué significa esto PARA TI?" -->
-    <!-- Paradoja de la elección eliminada: no eliges, cada capa encaja naturalmente -->
-    <!-- ============================== -->
+    <!-- MODELO HÍBRIDO -->
     <section id="modelo" class="relative py-24 lg:py-32 overflow-hidden">
         <div class="absolute inset-0 bg-black"></div>
         <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-nexus-500/20 to-transparent"></div>
@@ -565,7 +520,6 @@
             </div>
 
             <div class="section-hidden max-w-5xl mx-auto">
-                <!-- SaaS: Base -->
                 <div class="glass-nexus rounded-2xl p-8 lg:p-10 mb-4 border-glow">
                     <div class="grid lg:grid-cols-3 gap-8 items-center">
                         <div class="lg:col-span-2">
@@ -579,7 +533,6 @@
                                 </div>
                             </div>
                             <p class="text-silver-400 text-sm leading-relaxed mb-3">Plataforma lista para usar. Suscripción mensual. Cero tiempo de implementación.</p>
-                            <!-- "Para ti" = Autonomía -->
                             <div class="bg-nexus-500/5 border border-nexus-500/10 rounded-lg p-3 mb-4">
                                 <span class="text-nexus-400 text-[10px] font-bold tracking-[0.15em] uppercase">Qué significa para ti:</span>
                                 <p class="text-white text-sm mt-1">Mañana mismo tienes visibilidad sobre tu operación. Sin esperar. Sin riesgo.</p>
@@ -605,9 +558,7 @@
                     </div>
                 </div>
 
-                <!-- White Label + Enterprise -->
                 <div class="grid md:grid-cols-2 gap-4 mb-4">
-                    <!-- White Label: Circuito de ganancia/ambición -->
                     <div class="glass rounded-2xl p-8 card-hover border-glow">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
@@ -623,14 +574,12 @@
                             <span class="text-purple-400 text-[10px] font-bold tracking-[0.15em] uppercase">Qué significa para ti:</span>
                             <p class="text-white text-sm mt-1">Expandes tu catálogo de servicios mañana, sin un solo día de I+D.</p>
                         </div>
-                        <!-- Logos White Label como prueba visual -->
                         <div class="flex items-center gap-4 pt-3 border-t border-white/5">
-                            <img src="https://z-cdn-media.chatglm.cn/files/cfd4c175-b729-4c41-86cd-6685a902b417.png?auth_key=1883623715-5ba6cc3465494587b45b68440be49f5c-0-17b77ce68269ff62bae65441c67417f9" alt="Smart Logic" class="h-8 w-auto opacity-70" />
-                            <img src="https://z-cdn-media.chatglm.cn/files/95ede03f-423d-499f-bfeb-51d8c9120a84.png?auth_key=1883623715-a2d833715626406eafe97d9b4041c4ed-0-97abfe6cda30d70e4b73da7df9b073e7" alt="Kartvel Logic" class="h-8 w-auto opacity-70" />
+                            <img src="./assets/logos/smart-logic.png" alt="Smart Logic" class="h-8 w-auto opacity-70" />
+                            <img src="./assets/logos/kartvel-logic.png" alt="Kartvel Logic" class="h-8 w-auto opacity-70" />
                             <span class="text-silver-600 text-[10px] tracking-wider uppercase">+ Tu marca</span>
                         </div>
                     </div>
-                    <!-- Enterprise: Competencia + Estatus -->
                     <div class="glass rounded-2xl p-8 card-hover border-glow">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center">
@@ -654,7 +603,6 @@
                     </div>
                 </div>
 
-                <!-- Sinergia: Efecto de recencia positivo -->
                 <div class="glass rounded-2xl p-6 border-glow text-center" style="background: linear-gradient(135deg, rgba(0,123,255,0.08), rgba(0,123,255,0.02));">
                     <div class="flex items-center justify-center gap-3 mb-2">
                         <i data-lucide="infinity" class="w-5 h-5 text-nexus-400"></i>
@@ -666,11 +614,7 @@
         </div>
     </section>
 
-    <!-- ============================== -->
-    <!-- LIDERAZGO — Neuro: Escasez social + In-group bias -->
-    <!-- "Lo que tu competencia no puede copiar" = exclusividad + amenaza competitiva -->
-    <!-- Valkiria y Vibe Coding como "armas secretas" no como "metodologías" -->
-    <!-- ============================== -->
+    <!-- LIDERAZGO -->
     <section id="liderazgo" class="relative py-24 lg:py-32 overflow-hidden">
         <div class="absolute inset-0 bg-dark-400"></div>
         <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
@@ -685,7 +629,6 @@
                     <div class="w-8 h-px bg-nexus-500"></div>
                     <span class="text-nexus-400 text-xs font-bold tracking-[0.2em] uppercase">Pilar 03 — Lo que no se puede copiar</span>
                 </div>
-                <!-- Escasez: "Nadie puede replicar esto" -->
                 <h2 class="text-3xl lg:text-5xl font-black text-white leading-[0.95] tracking-tighter uppercase mb-4">
                     Tu competencia<br/>puede comprar IA.<br/><span class="text-gradient-nexus">No puede comprar esto.</span>
                 </h2>
@@ -695,7 +638,6 @@
             </div>
 
             <div class="section-hidden grid lg:grid-cols-2 gap-6 mb-12">
-                <!-- Valkiria: "El juicio que la IA no tiene" -->
                 <div class="glass rounded-2xl overflow-hidden card-hover group">
                     <div class="img-overlay h-48">
                         <img src="https://picsum.photos/seed/elite-training-dark/800/400.jpg" alt="Formación Valkiria" class="w-full h-full object-cover" />
@@ -705,7 +647,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-white text-2xl font-black mb-3 tracking-tight">Valkiria™ <span class="text-silver-500 text-base font-normal">no es un curso.</span></h3>
-                        <p class="text-silver-400 text-sm leading-relaxed mb-4">Es un sistema de formación propietario que crea desarrolladores con algo que la IA nunca tendrá: <span class="text-white font-medium"> criterio crítico</span>. Saben cuándo el código que genera la IA es brillante y cuándo es una trampa.</p>
+                        <p class="text-silver-400 text-sm leading-relaxed mb-4">Es un sistema de formación propietario que crea desarrolladores con algo que la IA nunca tendrá: <span class="text-white font-medium">criterio crítico</span>. Saben cuándo el código que genera la IA es brillante y cuándo es una trampa.</p>
                         <div class="grid grid-cols-3 gap-3">
                             <div class="bg-white/[0.03] rounded-lg p-3 text-center">
                                 <i data-lucide="shield" class="w-4 h-4 text-nexus-400 mx-auto mb-1"></i>
@@ -725,7 +667,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Vibe Coding: "No es generar código, es orquestar" -->
                 <div class="glass rounded-2xl overflow-hidden card-hover group">
                     <div class="img-overlay h-48">
                         <img src="https://picsum.photos/seed/ai-coding-flow-dark/800/400.jpg" alt="Vibe Coding" class="w-full h-full object-cover" />
@@ -757,7 +698,6 @@
                 </div>
             </div>
 
-            <!-- Ciclo virtuoso: "Por qué no se puede copiar" -->
             <div class="section-hidden glass rounded-2xl p-8 lg:p-10">
                 <div class="text-center mb-8">
                     <h4 class="text-white text-lg font-bold mb-2">El ciclo que nadie puede replicar (porque tardó años en construirse)</h4>
@@ -770,560 +710,4 @@
                         <div class="text-silver-500 text-[10px]">Velocidad controlada</div>
                     </div>
                     <i data-lucide="arrow-right" class="w-5 h-5 text-nexus-500/50 hidden md:block"></i>
-                    <i data-lucide="arrow-down" class="w-5 h-5 text-nexus-500/50 md:hidden"></i>
-                    <div class="glass-nexus rounded-xl p-4 text-center min-w-[150px]">
-                        <i data-lucide="shield-check" class="w-5 h-5 text-nexus-400 mx-auto mb-2"></i>
-                        <div class="text-white text-xs font-bold">Valkiria™ valida</div>
-                        <div class="text-silver-500 text-[10px]">Calidad garantizada</div>
-                    </div>
-                    <i data-lucide="arrow-right" class="w-5 h-5 text-nexus-500/50 hidden md:block"></i>
-                    <i data-lucide="arrow-down" class="w-5 h-5 text-nexus-500/50 md:hidden"></i>
-                    <div class="glass-nexus rounded-xl p-4 text-center min-w-[150px]">
-                        <i data-lucide="gem" class="w-5 h-5 text-nexus-400 mx-auto mb-2"></i>
-                        <div class="text-white text-xs font-bold">Gema Oráculo™</div>
-                        <div class="text-silver-500 text-[10px]">Tuyo. Exclusivo.</div>
-                    </div>
-                    <i data-lucide="arrow-right" class="w-5 h-5 text-nexus-500/50 hidden md:block"></i>
-                    <i data-lucide="arrow-down" class="w-5 h-5 text-nexus-500/50 md:hidden"></i>
-                    <div class="glass-nexus rounded-xl p-4 text-center min-w-[150px]">
-                        <i data-lucide="refresh-cw" class="w-5 h-5 text-nexus-400 mx-auto mb-2"></i>
-                        <div class="text-white text-xs font-bold">Retroalimenta</div>
-                        <div class="text-silver-500 text-[10px]">Mejora continua</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================== -->
-    <!-- RESULTADOS — Neuro: Prueba social específica + Antes/Después -->
-    <!-- Social proof "Empresas como la tuya" = In-group bias -->
-    <!-- Cada métrica tiene contexto: "Qué significa en tu realidad" -->
-    <!-- ============================== -->
-    <section id="resultados" class="relative py-24 lg:py-32 overflow-hidden">
-        <div class="absolute inset-0 bg-black"></div>
-        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-nexus-500/30 to-transparent"></div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-6">
-            <div class="section-hidden text-center mb-16">
-                <div class="inline-flex items-center gap-2 mb-6">
-                    <div class="w-8 h-px bg-nexus-500"></div>
-                    <span class="text-nexus-400 text-xs font-bold tracking-[0.2em] uppercase">La prueba, no la promesa</span>
-                    <div class="w-8 h-px bg-nexus-500"></div>
-                </div>
-                <h2 class="text-3xl lg:text-5xl font-black text-white leading-[0.95] tracking-tighter uppercase mb-4">
-                    Empresas como<br/><span class="text-gradient-nexus">la tuya</span> ya<br/>ven los números.
-                </h2>
-                <p class="text-silver-400 text-base font-light max-w-lg mx-auto leading-relaxed">
-                    Cada cifra tiene un contexto real. No son proyecciones. Son consecuencias directas del sistema.
-                </p>
-            </div>
-
-            <!-- Stats con contexto -->
-            <div class="section-hidden grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-                <div class="glass rounded-2xl p-6 text-center card-hover border-glow">
-                    <div class="text-4xl lg:text-5xl font-black text-nexus-400 mb-2 counter" data-target="25">0</div>
-                    <div class="text-white text-sm font-bold mb-1">% Menos Tiempo</div>
-                    <div class="text-silver-500 text-xs">Lo que 3 devs hacen en 4 semanas, en 3</div>
-                    <div class="stat-bar mt-4"><div class="stat-bar-fill" data-width="75"></div></div>
-                </div>
-                <div class="glass rounded-2xl p-6 text-center card-hover border-glow">
-                    <div class="text-4xl lg:text-5xl font-black text-nexus-400 mb-2">&lt;48</div>
-                    <div class="text-white text-sm font-bold mb-1">Horas de Respuesta</div>
-                    <div class="text-silver-500 text-xs">Desde cualquier incidente operativo</div>
-                    <div class="stat-bar mt-4"><div class="stat-bar-fill" data-width="90"></div></div>
-                </div>
-                <div class="glass rounded-2xl p-6 text-center card-hover border-glow">
-                    <div class="text-4xl lg:text-5xl font-black text-nexus-400 mb-2 counter" data-target="60">0</div>
-                    <div class="text-white text-sm font-bold mb-1">K$ Ahorrados/Año</div>
-                    <div class="text-silver-500 text-xs">Vs. herramientas SaaS externas</div>
-                    <div class="stat-bar mt-4"><div class="stat-bar-fill" data-width="85"></div></div>
-                </div>
-                <div class="glass rounded-2xl p-6 text-center card-hover border-glow">
-                    <div class="text-4xl lg:text-5xl font-black text-nexus-400 mb-2">2.5K</div>
-                    <div class="text-white text-sm font-bold mb-1">Tokens Base</div>
-                    <div class="text-silver-500 text-xs">Eficiencia que baja tu costo por consulta IA</div>
-                    <div class="stat-bar mt-4"><div class="stat-bar-fill" data-width="65"></div></div>
-                </div>
-            </div>
-
-            <!-- Casos: Antes/Después = Arco emocional completo -->
-            <div class="section-hidden grid lg:grid-cols-3 gap-4">
-                <div class="glass rounded-2xl overflow-hidden card-hover">
-                    <div class="img-overlay h-40">
-                        <img src="https://picsum.photos/seed/enterprise-nexus-dark/600/400.jpg" alt="NEXUS 360" class="w-full h-full object-cover" />
-                        <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
-                            <span class="text-[10px] font-bold tracking-[0.15em] uppercase text-nexus-400 bg-black/60 px-2 py-1 rounded">SaaS — Operaciones</span>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <h4 class="text-white text-sm font-bold mb-1">NEXUS 360</h4>
-                        <p class="text-red-400/70 text-[11px] mb-1 line-through">Antes: Multas constantes. Respuesta en días.</p>
-                        <p class="text-green-400/90 text-[11px] mb-3">Después: Cero multas. Respuesta &lt;48h. Visibilidad total.</p>
-                        <div class="flex items-center gap-2 text-nexus-400 text-xs font-semibold">
-                            <i data-lucide="trending-down" class="w-3.5 h-3.5"></i>
-                            <span>Multas: de recurrentes a cero</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="glass rounded-2xl overflow-hidden card-hover">
-                    <div class="img-overlay h-40">
-                        <img src="https://picsum.photos/seed/agency-white-label-dark/600/400.jpg" alt="White Label" class="w-full h-full object-cover" />
-                        <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
-                            <span class="text-[10px] font-bold tracking-[0.15em] uppercase text-purple-400 bg-black/60 px-2 py-1 rounded">White Label — Partners</span>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <h4 class="text-white text-sm font-bold mb-1">Agencias que revenden IA</h4>
-                        <p class="text-red-400/70 text-[11px] mb-1 line-through">Antes: Sin IA en su oferta. Clientes yendo a la competencia.</p>
-                        <p class="text-green-400/90 text-[11px] mb-3">Después: Tecnología IA bajo su marca. Lanzamiento en días.</p>
-                        <div class="flex items-center gap-2 text-purple-400 text-xs font-semibold">
-                            <i data-lucide="users" class="w-3.5 h-3.5"></i>
-                            <span>Catálogo expandido. Inversión en I+D: $0.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="glass rounded-2xl overflow-hidden card-hover">
-                    <div class="img-overlay h-40">
-                        <img src="https://picsum.photos/seed/custom-app-build-dark/600/400.jpg" alt="Enterprise Custom" class="w-full h-full object-cover" />
-                        <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
-                            <span class="text-[10px] font-bold tracking-[0.15em] uppercase text-amber-400 bg-black/60 px-2 py-1 rounded">Enterprise — A medida</span>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <h4 class="text-white text-sm font-bold mb-1">App interna (caso Blinkist)</h4>
-                        <p class="text-red-400/70 text-[11px] mb-1 line-through">Antes: 3 apps. Presupuesto de agencia: cientos de miles.</p>
-                        <p class="text-green-400/90 text-[11px] mb-3">Después: 3 apps entregadas en días. Costo: pocos miles.</p>
-                        <div class="flex items-center gap-2 text-amber-400 text-xs font-semibold">
-                            <i data-lucide="zap" class="w-3.5 h-3.5"></i>
-                            <span>De meses a días. De 100K+ a ~3K.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================== -->
-    <!-- PROCESO — Neuro: Viaje emocional nombrado por paso -->
-    <!-- Cada paso = transición de estado emocional (incertidumbre→certidumbre) -->
-    <!-- Derecha: Neurociencia aplicada como "arma secreta" de venta -->
-    <!-- ============================== -->
-    <section id="proceso" class="relative py-24 lg:py-32 overflow-hidden">
-        <div class="absolute inset-0 bg-dark-400"></div>
-        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-6">
-            <div class="section-hidden grid lg:grid-cols-2 gap-16">
-                <div>
-                    <div class="inline-flex items-center gap-2 mb-6">
-                        <div class="w-8 h-px bg-nexus-500"></div>
-                        <span class="text-nexus-400 text-xs font-bold tracking-[0.2em] uppercase">Tu viaje: de la duda a la certidumbre</span>
-                    </div>
-                    <h2 class="text-3xl lg:text-5xl font-black text-white leading-[0.95] tracking-tighter uppercase mb-4">
-                        Cuatro pasos.<br/><span class="text-gradient-nexus">Cero sorpresas.</span>
-                    </h2>
-                    <p class="text-silver-400 text-base font-light max-w-md leading-relaxed mb-10">
-                        Sabes exactamente dónde estás en cada momento. Y sabes exactamente qué viene después.
-                    </p>
-
-                    <!-- Cada paso nombra la transición emocional -->
-                    <div class="space-y-0">
-                        <div class="process-line relative pl-12 pb-10">
-                            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-nexus-500 flex items-center justify-center z-10 shadow-lg shadow-nexus-500/30">
-                                <span class="text-white text-sm font-black">01</span>
-                            </div>
-                            <div>
-                                <div class="text-nexus-400 text-[10px] font-bold tracking-[0.15em] uppercase mb-1">De la confusión a la claridad</div>
-                                <h4 class="text-white text-base font-bold mb-1">Diagnóstico Estratégico (DCR™)</h4>
-                                <p class="text-silver-400 text-sm leading-relaxed">Mapeamos dónde está la fricción, cuánto te cuesta (en dinero y en energía mental), y qué automatizar primero para máximo impacto.</p>
-                            </div>
-                        </div>
-                        <div class="process-line relative pl-12 pb-10">
-                            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-nexus-500/80 flex items-center justify-center z-10">
-                                <span class="text-white text-sm font-black">02</span>
-                            </div>
-                            <div>
-                                <div class="text-nexus-400 text-[10px] font-bold tracking-[0.15em] uppercase mb-1">De la claridad a la construcción</div>
-                                <h4 class="text-white text-base font-bold mb-1">Construcción con Vibe Coding™</h4>
-                                <p class="text-silver-400 text-sm leading-relaxed">No escribimos código manual. Orquestamos IA con precisión. Lo que tomaría semanas, se entrega en días — con calidad validada.</p>
-                            </div>
-                        </div>
-                        <div class="process-line relative pl-12 pb-10">
-                            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-nexus-500/60 flex items-center justify-center z-10">
-                                <span class="text-white text-sm font-black">03</span>
-                            </div>
-                            <div>
-                                <div class="text-nexus-400 text-[10px] font-bold tracking-[0.15em] uppercase mb-1">De la construcción a la confianza</div>
-                                <h4 class="text-white text-base font-bold mb-1">Validación Valkiria™ + Capacitación</h4>
-                                <p class="text-silver-400 text-sm leading-relaxed">Cada línea es evaluada por talento formado en criterio crítico. Tu equipo, si quieres, también aprende a manejarlo.</p>
-                            </div>
-                        </div>
-                        <div class="relative pl-12">
-                            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-nexus-500/40 flex items-center justify-center z-10 border border-nexus-500/50">
-                                <span class="text-nexus-400 text-sm font-black">04</span>
-                            </div>
-                            <div>
-                                <div class="text-nexus-400 text-[10px] font-bold tracking-[0.15em] uppercase mb-1">De la confianza a la autonomía</div>
-                                <h4 class="text-white text-base font-bold mb-1">Entrega de tus Gemas Oráculo™ + Soporte</h4>
-                                <p class="text-silver-400 text-sm leading-relaxed">Recibes tus activos de conocimiento 100% tuyos. Funcionan solos. Y si necesitas algo más, estamos ahí.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Neurociencia como "arma de persuasión" -->
-                <div class="flex flex-col gap-6">
-                    <div class="glass rounded-2xl p-8 border-glow flex-1">
-                        <div class="text-nexus-400 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Por qué funciona (la ciencia detrás)</div>
-                        <h3 class="text-white text-2xl font-black mb-4 leading-tight">No te pedimos que nos creas.<br/>Te pedimos que <span class="text-gradient-nexus">razones</span>.</h3>
-                        <p class="text-silver-400 text-sm leading-relaxed mb-6">
-                            Cada palabra en esta página fue elegida por su efecto en tu corteza prefrontal. No es manipulación. Es comunicación que respeta cómo tu cerebro realmente toma decisiones.
-                        </p>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-3 p-3 rounded-lg bg-white/[0.02]">
-                                <div class="w-8 h-8 rounded-lg bg-nexus-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <i data-lucide="shield-alert" class="w-4 h-4 text-nexus-400"></i>
-                                </div>
-                                <div>
-                                    <div class="text-white text-xs font-bold mb-0.5">Aversión a la pérdida</div>
-                                    <div class="text-silver-500 text-[11px] leading-relaxed">Tu cerebro teme perder 2x más de lo que desea ganar. Por eso empezamos hablando de lo que pierdes, no de lo que puedes ganar.</div>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3 p-3 rounded-lg bg-white/[0.02]">
-                                <div class="w-8 h-8 rounded-lg bg-nexus-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <i data-lucide="heart" class="w-4 h-4 text-nexus-400"></i>
-                                </div>
-                                <div>
-                                    <div class="text-white text-xs font-bold mb-0.5">Efecto de Dotación</div>
-                                    <div class="text-silver-500 text-[11px] leading-relaxed">"Tuyo", "tuyas", "te pertenece" no es casual. Valoras 3x más lo que sientes como propio. Por eso las Gemas Oráculo™ son tuyas, no nuestras.</div>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3 p-3 rounded-lg bg-white/[0.02]">
-                                <div class="w-8 h-8 rounded-lg bg-nexus-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <i data-lucide="brain" class="w-4 h-4 text-nexus-400"></i>
-                                </div>
-                                <div>
-                                    <div class="text-white text-xs font-bold mb-0.5">Certidumbre como ansiolítico</div>
-                                    <div class="text-silver-500 text-[11px] leading-relaxed">Tu cerebro odia la incertidumbre más que el dolor. "Cero sorpresas", "Cero riesgo", "100% tuyo" no son slogans: son la respuesta neurológica que buscas.</div>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3 p-3 rounded-lg bg-white/[0.02]">
-                                <div class="w-8 h-8 rounded-lg bg-nexus-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <i data-lucide="lightbulb" class="w-4 h-4 text-nexus-400"></i>
-                                </div>
-                                <div>
-                                    <div class="text-white text-xs font-bold mb-0.5">Simplexidad</div>
-                                    <div class="text-silver-500 text-[11px] leading-relaxed">"Piénsalo como una fábrica" activa comprensión instantánea. Complejidad envuelta en simplicidad = cerebro satisfecho, no abrumado.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Manifesto con compromiso y consistencia -->
-                    <div class="glass rounded-2xl p-6">
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="quote" class="w-8 h-8 text-nexus-500/30 flex-shrink-0"></i>
-                            <div>
-                                <p class="text-white text-sm font-medium italic leading-relaxed mb-3">"Si llegaste hasta aquí, ya sabes que necesitas cambiar algo. Solo falta decidir si lo haces con un sistema probado o sigues apostando a la inercia."</p>
-                                <div class="text-silver-500 text-xs font-semibold">— El principio de consistencia funciona. Y tú ya eres consistente con leer hasta aquí.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================== -->
-    <!-- VISIÓN — Neuro: Cierre con anclaje de estatus -->
-    <!-- "Complejidad en claridad rentable" = la frase que el cerebro guarda -->
-    <!-- Efecto de recencia: lo último = lo más recordado -->
-    <!-- ============================== -->
-    <section class="relative py-24 lg:py-40 overflow-hidden">
-        <div class="absolute inset-0 bg-black"></div>
-        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-nexus-500/30 to-transparent"></div>
-        <div class="absolute inset-0">
-            <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-nexus-500/5 rounded-full blur-[150px]"></div>
-            <div class="absolute bottom-1/3 right-1/4 w-64 h-64 bg-nexus-400/3 rounded-full blur-[120px]"></div>
-        </div>
-
-        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-            <div class="section-hidden">
-                <div class="inline-flex items-center gap-2 mb-8">
-                    <div class="w-8 h-px bg-nexus-500"></div>
-                    <span class="text-nexus-400 text-xs font-bold tracking-[0.2em] uppercase">Lo que te llevas</span>
-                    <div class="w-8 h-px bg-nexus-500"></div>
-                </div>
-                <!-- La frase-ancora que se queda en la memoria -->
-                <h2 class="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-6" style="animation: glow-pulse 4s ease-in-out infinite;">
-                    Complejidad en<br/><span class="text-gradient-nexus">claridad rentable.</span>
-                </h2>
-                <p class="text-silver-400 text-lg lg:text-xl font-light max-w-2xl mx-auto leading-relaxed mb-4">
-                    Esa es la transformación. De la fricción que drena a la <span class="text-white font-medium">certidumbre que libera</span>. Del proveedor transaccional al <span class="text-white font-medium">socio estratégico que tu competencia desea tener</span>.
-                </p>
-                <p class="text-silver-500 text-base font-light max-w-xl mx-auto leading-relaxed mb-12">
-                    No es una promesa de futuro. Es lo que ya hacemos. Falta que lo veas con tus propios números.
-                </p>
-
-                <!-- Logo central como ancla visual -->
-                <div class="flex justify-center mb-6">
-                    <div class="relative">
-                        <div class="w-36 h-36 rounded-full border-2 border-nexus-500/20 flex items-center justify-center mx-auto" style="animation: orbit 20s linear infinite;">
-                            <div class="w-28 h-28 rounded-full border border-nexus-400/10 flex items-center justify-center" style="animation: orbit 15s linear infinite reverse;">
-                                <img src="https://z-cdn-media.chatglm.cn/files/0510dbc6-8f61-4054-bc3c-95a88ce3c88f.jpeg?auth_key=1883623715-8653b90061034feb87da7831c7df7c07-0-746a0490592f08dab10ce16189283de3" alt="Omni Logic" class="logo-img-lg" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-silver-500 text-xs tracking-[0.2em] uppercase">La inteligencia que conecta tu negocio</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================== -->
-    <!-- CTA — Neuro: Cierre asumptivo + Consistencia + Reducción de fricción -->
-    <!-- "Si llegaste aquí..." = consistencia (ya invertiste tiempo, ahora invierte acción) -->
-    <!-- Formulario mínimo = fricción cero -->
-    <!-- Objeciones como "seguros" = reducir ansiedad de decisión -->
-    <!-- ============================== -->
-    <section id="contacto" class="relative py-24 lg:py-32 overflow-hidden">
-        <div class="absolute inset-0 bg-dark-400"></div>
-        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-nexus-500/30 to-transparent"></div>
-        <div class="absolute inset-0">
-            <img src="https://picsum.photos/seed/future-office-dark-blue/1920/800.jpg" alt="" class="w-full h-full object-cover opacity-5" />
-            <div class="absolute inset-0 bg-dark-400/95"></div>
-        </div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-6">
-            <div class="section-hidden grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <div class="inline-flex items-center gap-2 mb-6">
-                        <div class="w-8 h-px bg-nexus-500"></div>
-                        <span class="text-nexus-400 text-xs font-bold tracking-[0.2em] uppercase">El primer paso es tuyo</span>
-                    </div>
-                    <!-- Cierre asuntivo: no preguntes "¿listo?", di "este es el paso" -->
-                    <h2 class="text-3xl lg:text-5xl font-black text-white leading-[0.95] tracking-tighter uppercase mb-6">
-                        Si llegaste<br/>hasta aquí,<br/><span class="text-gradient-nexus">ya decidiste.</span>
-                    </h2>
-                    <p class="text-silver-400 text-base font-light leading-relaxed mb-6 max-w-md">
-                        Solo falta hacerlo sin riesgo. Un piloto de 30 días, sin compromiso, donde tú ves resultados reales antes de invertir un centavo más.
-                    </p>
-
-                    <!-- Pregunta que obliga a pensar en su realidad -->
-                    <div class="glass rounded-xl p-5 mb-8 border-l-2 border-nexus-500/50">
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="message-circle" class="w-5 h-5 text-nexus-400 mt-0.5 flex-shrink-0"></i>
-                            <div>
-                                <div class="text-white text-sm font-semibold mb-1">Piensa en esto 10 segundos:</div>
-                                <p class="text-silver-300 text-sm italic leading-relaxed">"¿Qué proceso de mi operación me quita más tiempo esta semana... y cuánto me costaría si siguiera igual todo el año?"</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Objeciones como "red de seguridad" (reducir ansiedad, no convencer) -->
-                    <div class="space-y-3">
-                        <div class="text-silver-500 text-[10px] font-bold tracking-[0.2em] uppercase">Las tres dudas que tienes (y la respuesta)</div>
-                        <details class="group glass rounded-lg">
-                            <summary class="p-4 cursor-pointer flex items-center justify-between text-sm text-silver-300 hover:text-white transition-colors">
-                                <span>"Parece caro para lo que es."</span>
-                                <i data-lucide="chevron-down" class="w-4 h-4 text-silver-500 group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <div class="px-4 pb-4 text-silver-400 text-xs leading-relaxed">Entendemos. Por eso no te pedimos que compres. Te pedimos 30 días de piloto sin compromiso. Si no ves valor medible, no sigues. El riesgo es nuestro, no el tuyo.</div>
-                        </details>
-                        <details class="group glass rounded-lg">
-                            <summary class="p-4 cursor-pointer flex items-center justify-between text-sm text-silver-300 hover:text-white transition-colors">
-                                <span>"Y si la IA genera código con errores?"</span>
-                                <i data-lucide="chevron-down" class="w-4 h-4 text-silver-500 group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <div class="px-4 pb-4 text-silver-400 text-xs leading-relaxed">Exactamente por eso existe Valkiria™. La IA genera rápido. El talento formado evalúa con criterio. Velocidad sin calidad es una ilusión — nosotros entregamos ambas.</div>
-                        </details>
-                        <details class="group glass rounded-lg">
-                            <summary class="p-4 cursor-pointer flex items-center justify-between text-sm text-silver-300 hover:text-white transition-colors">
-                                <span>"¿En qué se diferencia de lo que ya probé?"</span>
-                                <i data-lucide="chevron-down" class="w-4 h-4 text-silver-500 group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <div class="px-4 pb-4 text-silver-400 text-xs leading-relaxed">Si lo que probaste te entregó código y una factura, era lo tradicional. Nosotros te entregamos un activo de conocimiento que te pertenece, que se auto-mejora, y que funciona después de que nos vamos. No es lo mismo. No es comparable.</div>
-                        </details>
-                    </div>
-                </div>
-
-                <!-- Formulario: Fricción cero = campos mínimos -->
-                <div class="glass-strong rounded-2xl p-8 lg:p-10 border-glow">
-                    <h3 class="text-white text-xl font-bold mb-2">Piloto sin compromiso. 30 días.</h3>
-                    <p class="text-silver-500 text-sm mb-8">Completa esto y un especialista te contacta en menos de 48 horas. Sin venta agresiva. Sin compromiso.</p>
-                    <form id="contactForm" class="space-y-5">
-                        <div class="grid sm:grid-cols-2 gap-5">
-                            <div>
-                                <label class="text-silver-400 text-xs font-medium mb-1.5 block">Nombre *</label>
-                                <input type="text" required class="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-silver-600 focus:outline-none focus:border-nexus-500/50 focus:ring-1 focus:ring-nexus-500/30 transition-all" placeholder="Tu nombre" />
-                            </div>
-                            <div>
-                                <label class="text-silver-400 text-xs font-medium mb-1.5 block">Empresa *</label>
-                                <input type="text" required class="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-silver-600 focus:outline-none focus:border-nexus-500/50 focus:ring-1 focus:ring-nexus-500/30 transition-all" placeholder="Tu empresa" />
-                            </div>
-                        </div>
-                        <div>
-                            <label class="text-silver-400 text-xs font-medium mb-1.5 block">Email corporativo *</label>
-                            <input type="email" required class="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-silver-600 focus:outline-none focus:border-nexus-500/50 focus:ring-1 focus:ring-nexus-500/30 transition-all" placeholder="nombre@empresa.com" />
-                        </div>
-                        <div>
-                            <label class="text-silver-400 text-xs font-medium mb-1.5 block">Tu rol</label>
-                            <select class="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-silver-400 text-sm focus:outline-none focus:border-nexus-500/50 focus:ring-1 focus:ring-nexus-500/30 transition-all appearance-none" style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23606060%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 12px center;">
-                                <option value="">Seleccionar...</option>
-                                <option value="ceo">CEO / Director General</option>
-                                <option value="coo">COO / Director de Operaciones</option>
-                                <option value="cto">CTO / Director de Tecnología</option>
-                                <option value="cfo">CFO / Director Financiero</option>
-                                <option value="pm">Project Manager</option>
-                                <option value="it">Líder de TI</option>
-                                <option value="partner">Socio / Agencia (White Label)</option>
-                                <option value="other">Otro</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="text-silver-400 text-xs font-medium mb-1.5 block">¿Qué proceso te quita más tiempo? <span class="text-silver-600">(opcional)</span></label>
-                            <textarea rows="3" class="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-silver-600 focus:outline-none focus:border-nexus-500/50 focus:ring-1 focus:ring-nexus-500/30 transition-all resize-none" placeholder="Solo una frase. Ej: 'Revisar reportes semanales que me toma 6 horas'"></textarea>
-                        </div>
-                        <button type="submit" class="cta-btn w-full bg-nexus-500 hover:bg-nexus-600 text-white font-bold text-sm tracking-wider uppercase py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
-                            Quiero Mi Piloto Sin Riesgo
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </button>
-                        <div class="flex items-center justify-center gap-4 pt-1">
-                            <span class="text-silver-600 text-[10px] flex items-center gap-1"><i data-lucide="shield-check" class="w-3 h-3"></i> Sin compromiso</span>
-                            <span class="text-silver-600 text-[10px] flex items-center gap-1"><i data-lucide="credit-card" class="w-3 h-3"></i> Sin tarjeta</span>
-                            <span class="text-silver-600 text-[10px] flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> Resultados en 30 días</span>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="relative py-12 bg-black border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="flex items-center gap-4">
-                    <img src="https://z-cdn-media.chatglm.cn/files/0510dbc6-8f61-4054-bc3c-95a88ce3c88f.jpeg?auth_key=1883623715-8653b90061034feb87da7831c7df7c07-0-746a0490592f08dab10ce16189283de3" alt="Omni Logic" class="h-8 w-auto" />
-                    <span class="text-silver-600 text-xs">|</span>
-                    <span class="text-silver-500 text-xs">La inteligencia que conecta tu negocio</span>
-                </div>
-                <div class="flex items-center gap-6">
-                    <span class="text-silver-600 text-xs">© 2026 Omnilogic Systems</span>
-                    <div class="flex items-center gap-4">
-                        <a href="#" class="text-silver-500 hover:text-nexus-400 transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-                        <a href="#" class="text-silver-500 hover:text-nexus-400 transition-colors"><i data-lucide="twitter" class="w-4 h-4"></i></a>
-                        <a href="#" class="text-silver-500 hover:text-nexus-400 transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- TOAST -->
-    <div id="toast" class="toast">
-        <div class="glass-strong rounded-xl p-5 flex items-start gap-3 min-w-[320px] border border-nexus-500/30">
-            <div class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>
-            </div>
-            <div>
-                <div class="text-white text-sm font-bold">Recibimos tu solicitud.</div>
-                <div class="text-silver-400 text-xs mt-0.5">Un especialista te contacta en menos de 48 horas. Sin compromiso.</div>
-            </div>
-            <button onclick="hideToast()" class="text-silver-500 hover:text-white transition-colors ml-2">
-                <i data-lucide="x" class="w-4 h-4"></i>
-            </button>
-        </div>
-    </div>
-
-    <script>
-        lucide.createIcons();
-
-        // NAVBAR
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 80) {
-                navbar.classList.add('glass-strong');
-                navbar.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
-            } else {
-                navbar.classList.remove('glass-strong');
-                navbar.style.borderBottom = 'none';
-            }
-        });
-
-        // MOBILE MENU
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        let menuOpen = false;
-        mobileMenuBtn.addEventListener('click', () => {
-            menuOpen = !menuOpen;
-            mobileMenu.classList.toggle('hidden');
-        });
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuOpen = false;
-            });
-        });
-
-        // SCROLL REVEAL
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('section-visible');
-                    entry.target.querySelectorAll('.counter').forEach(counter => animateCounter(counter));
-                    entry.target.querySelectorAll('.stat-bar-fill').forEach(bar => {
-                        setTimeout(() => { bar.style.width = bar.dataset.width + '%'; }, 300);
-                    });
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        document.querySelectorAll('.section-hidden').forEach(el => sectionObserver.observe(el));
-
-        // COUNTER
-        function animateCounter(el) {
-            if (el.dataset.animated) return;
-            el.dataset.animated = 'true';
-            const target = parseInt(el.dataset.target);
-            if (!target) return;
-            const duration = 2000;
-            const start = performance.now();
-            function update(now) {
-                const elapsed = now - start;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 4);
-                el.textContent = Math.round(target * eased);
-                if (progress < 1) requestAnimationFrame(update);
-            }
-            requestAnimationFrame(update);
-        }
-
-        // FORM
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            showToast();
-            e.target.reset();
-        });
-
-        // TOAST
-        function showToast() {
-            document.getElementById('toast').classList.add('show');
-            setTimeout(hideToast, 5000);
-        }
-        function hideToast() {
-            document.getElementById('toast').classList.remove('show');
-        }
-
-        // SMOOTH SCROLL
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                    <i data-lucide="arrow-down" class="w-5 h-5 text-n
